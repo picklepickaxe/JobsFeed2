@@ -16,14 +16,9 @@ const queryClient = new QueryClient();
 
 // Component to handle initial routing logic
 const AppRouter = () => {
-  const hasSeenSplash = localStorage.getItem("hasSeenSplash");
-
   return (
     <Routes>
-      <Route
-        path="/"
-        element={hasSeenSplash ? <Navigate to="/home" replace /> : <Splash />}
-      />
+      <Route path="/" element={<Splash />} />
       <Route path="/splash" element={<Splash />} />
       <Route path="/home" element={<Home />} />
       <Route path="/settings" element={<Settings />} />

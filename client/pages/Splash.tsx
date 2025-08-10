@@ -150,7 +150,7 @@ export default function Splash() {
             }}
           >
             <img
-
+              src="/android-chrome-512x512.png"
               alt="JobsFeed Logo"
               className="w-full h-full rounded-xl"
             />
@@ -244,7 +244,7 @@ export default function Splash() {
         )}
       </div>
 
-      <style jsx>{`
+  <style>{`
         @keyframes fade-in {
           from {
             opacity: 0;
