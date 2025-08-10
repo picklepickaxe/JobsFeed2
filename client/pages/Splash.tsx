@@ -120,34 +120,36 @@ export default function Splash() {
 
       {/* Interactive animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Top right glow */}
         <div
-          className="absolute w-32 h-32 bg-white/10 rounded-full animate-pulse transition-transform duration-1000"
+          className={`absolute w-32 h-32 rounded-full animate-pulse transition-transform duration-1000 ${isLight ? 'bg-yellow-200/60' : 'bg-white/10'}`}
           style={{
             top: "-16px",
             right: "-16px",
             transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)`,
           }}
         ></div>
+        {/* Left mid glow */}
         <div
-          className="absolute w-24 h-24 bg-white/5 rounded-full animate-bounce transition-transform duration-1000"
+          className={`absolute w-24 h-24 rounded-full animate-bounce transition-transform duration-1000 ${isLight ? 'bg-yellow-100/80' : 'bg-white/5'}`}
           style={{
             top: "25%",
             left: "-32px",
             transform: `translate(${mousePosition.x * 0.01}px, ${mousePosition.y * 0.01}px)`,
           }}
         ></div>
+        {/* Bottom right glow */}
         <div
-          className="absolute w-16 h-16 bg-white/10 rounded-full animate-ping transition-transform duration-1000"
+          className={`absolute w-16 h-16 rounded-full animate-ping transition-transform duration-1000 ${isLight ? 'bg-orange-200/70' : 'bg-white/10'}`}
           style={{
             bottom: "25%",
             right: "25%",
             transform: `translate(${mousePosition.x * 0.015}px, ${mousePosition.y * 0.015}px)`,
           }}
         ></div>
-
         {/* Additional floating elements */}
         <div
-          className="absolute w-20 h-20 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 rounded-full animate-pulse transition-transform duration-1500"
+          className={`absolute w-20 h-20 rounded-full animate-pulse transition-transform duration-1500 ${isLight ? 'bg-gradient-to-r from-yellow-200/60 to-orange-200/60' : 'bg-gradient-to-r from-yellow-400/20 to-orange-400/20'}`}
           style={{
             top: "60%",
             left: "10%",
@@ -155,7 +157,7 @@ export default function Splash() {
           }}
         ></div>
         <div
-          className="absolute w-14 h-14 bg-gradient-to-r from-green-400/20 to-blue-400/20 rounded-full animate-bounce transition-transform duration-1200"
+          className={`absolute w-14 h-14 rounded-full animate-bounce transition-transform duration-1200 ${isLight ? 'bg-gradient-to-r from-yellow-300/60 to-orange-300/60' : 'bg-gradient-to-r from-green-400/20 to-blue-400/20'}`}
           style={{
             top: "15%",
             right: "20%",
@@ -191,7 +193,7 @@ export default function Splash() {
           >
             JobsFeed
           </h1>
-          <p className={`text-xl mb-6 font-medium font-sans ${isLight ? 'text-gray-700' : 'text-blue-100'}`}>Find Your Dream Career</p>
+          <p className={`text-xl mb-6 font-medium font-sans ${isLight ? 'text-yellow-900' : 'text-blue-100'}`}>Find Your Dream Career</p>
 
           {/* Interactive Stats */}
           <div className="grid grid-cols-3 gap-4 mb-8">
@@ -202,10 +204,10 @@ export default function Splash() {
             ].map((item) => (
               <div
                 key={item.label}
-                className={`backdrop-blur-sm rounded-lg p-3 transition-all duration-300 cursor-pointer ${isLight ? 'bg-white/70 hover:bg-white/90' : 'bg-white/10 hover:bg-white/20'}`}
+                className={`backdrop-blur-sm rounded-lg p-3 transition-all duration-300 cursor-pointer ${isLight ? 'bg-yellow-100/80 hover:bg-yellow-200/90' : 'bg-white/10 hover:bg-white/20'}`}
               >
-                <div className={`text-2xl font-bold ${isLight ? 'text-blue-700' : 'text-white'}`}>{item.label}</div>
-                <div className={`text-sm ${isLight ? 'text-blue-700' : 'text-blue-100'}`}>{item.desc}</div>
+                <div className={`text-2xl font-bold ${isLight ? 'text-yellow-900' : 'text-white'}`}>{item.label}</div>
+                <div className={`text-sm ${isLight ? 'text-yellow-900' : 'text-blue-100'}`}>{item.desc}</div>
               </div>
             ))}
           </div>
@@ -237,7 +239,7 @@ export default function Splash() {
           </div>
         ) : (
           <div className="space-y-6 animate-fade-in">
-            <p className={`text-lg leading-relaxed ${isLight ? 'text-gray-700' : 'text-white/90'}`}>
+            <p className={`text-lg leading-relaxed ${isLight ? 'text-yellow-900' : 'text-white/90'}`}>
               Discover thousands of job opportunities tailored just for you.
               Your next career move starts here.
             </p>
@@ -245,7 +247,7 @@ export default function Splash() {
               <Button
                 onClick={handleContinue}
                 size="lg"
-                className={`font-semibold px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 ${isLight ? 'bg-blue-700 text-white hover:bg-blue-800' : 'bg-white text-blue-600 hover:bg-blue-50'}`}
+                className={`font-semibold px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 ${isLight ? 'bg-yellow-800 text-yellow-100 hover:bg-yellow-900' : 'bg-white text-blue-600 hover:bg-blue-50'}`}
               >
                 Explore Jobs
               </Button>
@@ -253,7 +255,7 @@ export default function Splash() {
                 onClick={handleLogin}
                 variant="outline"
                 size="lg"
-                className={`font-semibold px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 ${isLight ? 'border-blue-700 text-blue-700 hover:bg-blue-100 hover:text-blue-900' : 'border-white text-white hover:bg-white hover:text-blue-600'}`}
+                className={`font-semibold px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 ${isLight ? 'border-yellow-800 text-yellow-800 hover:bg-yellow-100 hover:text-yellow-900' : 'border-white text-white hover:bg-white hover:text-blue-600'}`}
               >
                 Quick Login
               </Button>
