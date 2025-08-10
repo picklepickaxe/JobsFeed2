@@ -117,7 +117,7 @@ export default function Home() {
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center">
                 <img
-
+                  src="/android-chrome-512x512.png"
                   alt="JobsFeed Logo"
                   className="w-10 h-10 mr-3 rounded-full"
                 />
