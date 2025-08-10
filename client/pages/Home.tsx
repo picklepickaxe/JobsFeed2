@@ -173,35 +173,29 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex gap-2 flex-wrap">
-              <Button
-                variant={selectedFilter === "all" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setSelectedFilter("all")}
-              >
-                All Jobs
-              </Button>
-              <Button
-                variant={selectedFilter === "remote" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setSelectedFilter("remote")}
-              >
-                Remote
-              </Button>
-              <Button
-                variant={selectedFilter === "fulltime" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setSelectedFilter("fulltime")}
-              >
-                Full-time
-              </Button>
-              <Button
-                variant={selectedFilter === "saved" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setSelectedFilter("saved")}
-              >
-                Saved ({savedJobs.length})
-              </Button>
+            <div className="flex space-x-2 bg-gray-100 dark:bg-gray-800 rounded-xl p-1 w-full max-w-xl mx-auto shadow-sm">
+              {[
+                { key: "all", label: "All Jobs" },
+                { key: "remote", label: "Remote" },
+                { key: "fulltime", label: "Full-time" },
+                { key: "saved", label: `Saved (${savedJobs.length})` },
+              ].map((tab) => (
+                <button
+                  key={tab.key}
+                  onClick={() => setSelectedFilter(tab.key)}
+                  className={`relative flex-1 px-4 py-2 rounded-lg font-medium transition-all focus:outline-none text-sm
+                    ${selectedFilter === tab.key
+                      ? "bg-white dark:bg-gray-900 shadow text-blue-600 dark:text-blue-400"
+                      : "bg-transparent text-gray-500 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"}
+                  `}
+                  style={{ zIndex: selectedFilter === tab.key ? 1 : 0 }}
+                >
+                  {tab.label}
+                  {selectedFilter === tab.key && (
+                    <span className="absolute left-0 right-0 -bottom-1 h-1 rounded-b-lg bg-blue-500 dark:bg-blue-400 transition-all" />
+                  )}
+                </button>
+              ))}
             </div>
           </div>
 
