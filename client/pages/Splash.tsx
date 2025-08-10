@@ -167,16 +167,10 @@ export default function Splash() {
               className="w-full h-full rounded-full object-cover"
             />
           </div>
-          <h1 className="text-5xl font-extrabold text-white mb-3 animate-pulse font-sans" style={{fontFamily: 'Inter, ui-sans-serif, system-ui, sans-serif'}}>
-            Craft Beautiful
+          <h1 className="text-5xl font-extrabold text-white mb-3 animate-pulse font-sans">
+            JobsFeed
           </h1>
-          <h2 className="text-4xl font-bold mb-2" style={{color: '#64748b', fontFamily: 'Inter, ui-sans-serif, system-ui, sans-serif'}}>
-            Patterns Backgrounds
-          </h2>
-          <p className="text-blue-100 text-lg mb-6 font-medium font-sans" style={{color: '#64748b', fontFamily: 'Inter, ui-sans-serif, system-ui, sans-serif'}}>
-            Professional-grade background patterns and gradients. Easily copy the code and seamlessly integrate it into your projects.<br />
-            Crafted with modern CSS and Tailwind
-          </p>
+          <p className="text-blue-100 text-xl mb-6 font-medium font-sans">Find Your Dream Career</p>
 
           {/* Interactive Stats */}
           <div className="grid grid-cols-3 gap-4 mb-8">
