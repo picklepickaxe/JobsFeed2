@@ -156,7 +156,7 @@ export default function Splash() {
         {/* Logo/Brand */}
         <div className="mb-8">
           <div
-            className="w-24 h-24 mx-auto mb-6 bg-white rounded-2xl flex items-center justify-center shadow-2xl p-1 transition-transform duration-300 hover:scale-110 hover:rotate-3"
+            className="w-24 h-24 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-2xl p-1 transition-transform duration-300 hover:scale-110 hover:rotate-3"
             style={{
               transform: `translateY(${Math.sin(Date.now() * 0.001) * 5}px)`,
             }}
@@ -164,13 +164,19 @@ export default function Splash() {
             <img
               src="/android-chrome-512x512.png"
               alt="JobsFeed Logo"
-              className="w-full h-full rounded-xl"
+              className="w-full h-full rounded-full object-cover"
             />
           </div>
-          <h1 className="text-5xl font-bold text-white mb-3 animate-pulse">
-            JobsFeed
+          <h1 className="text-5xl font-extrabold text-white mb-3 animate-pulse font-sans" style={{fontFamily: 'Inter, ui-sans-serif, system-ui, sans-serif'}}>
+            Craft Beautiful
           </h1>
-          <p className="text-blue-100 text-xl mb-6">Find Your Dream Career</p>
+          <h2 className="text-4xl font-bold mb-2" style={{color: '#64748b', fontFamily: 'Inter, ui-sans-serif, system-ui, sans-serif'}}>
+            Patterns Backgrounds
+          </h2>
+          <p className="text-blue-100 text-lg mb-6 font-medium font-sans" style={{color: '#64748b', fontFamily: 'Inter, ui-sans-serif, system-ui, sans-serif'}}>
+            Professional-grade background patterns and gradients. Easily copy the code and seamlessly integrate it into your projects.<br />
+            Crafted with modern CSS and Tailwind
+          </p>
 
           {/* Interactive Stats */}
           <div className="grid grid-cols-3 gap-4 mb-8">
