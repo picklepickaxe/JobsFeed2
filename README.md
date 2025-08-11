@@ -67,8 +67,8 @@ This project is for internship evaluation purposes only and is not licensed for 
 
 
 ### Settings Screen
-<img width="1919" height="871" alt="image" src="https://github.com/user-attachments/assets/9899aa14-bda2-4287-be64-6c186a36e245" />
 <img width="1919" height="867" alt="image" src="https://github.com/user-attachments/assets/7cd24dd6-0852-4d2d-b305-611a27fcc2b3" />
+<img width="1919" height="871" alt="image" src="https://github.com/user-attachments/assets/9899aa14-bda2-4287-be64-6c186a36e245" />
 
 
 
