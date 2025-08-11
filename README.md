@@ -1,6 +1,6 @@
 # React Native Intern Assignment - JobsFeed
 
-**Live Demo:** [View on Netlify]((https://jobsfeed.netlify.app/))
+**Live Demo:** [View on Netlify]([(https://jobsfeed.netlify.app/)])
 
 ## Description
 This React Native application was developed as part of an internship assignment. It contains three main screens:
